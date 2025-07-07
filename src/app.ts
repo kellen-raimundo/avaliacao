@@ -1,5 +1,6 @@
 import Fastify from 'fastify'
 import { AppDataSource } from './data-source'
+import { userRoutes } from './routes/user-routes'
 
 export async function startApp() {
     const app = Fastify ()
@@ -12,5 +13,7 @@ export async function startApp() {
         process.exit(1)
     })
 
+
+    app.register(userRoutes)
     return app
 }

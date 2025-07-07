@@ -20,8 +20,10 @@
   "dependencies": {
     "@fastify/cors": "^11.0.1",
     "bcryptjs": "^3.0.2",
+    "comment": "^0.0.2",
     "dotenv": "^16.5.0",
     "fastify": "^5.4.0",
+    "post": "^0.0.1",
     "reflect-metadata": "^0.2.2",
     "sqlite3": "^5.1.7",
     "typeorm": "^0.3.25",
