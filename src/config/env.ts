@@ -5,7 +5,7 @@ export const envSchema = z.object({
     DATABASE_FILE:z.string(),
     JWT_SECRET: z.string(),
     PORT: z.coerce.number().default(3333),
-    NODE_ENV: z.enum(['dev', 'production','test']).default('dev')
+    NODE_ENV: z.enum(['dev', 'production', 'test']).default('dev')
 })
 
 const _env = envSchema.safeParse(process.env)

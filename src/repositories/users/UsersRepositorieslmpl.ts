@@ -10,6 +10,10 @@ export class UsersRepository implements IUsersRepository{
         const newUser = this.repository.create(user)
         return await this.repository.save(newUser)
     }
+    
+    async findAll(): Promise<User[]> {
+        return this.repository.find()
+      }
 
     findById(id: string): Promise<User | null> {
         return this.repository.findOne({where:{id}})
@@ -29,11 +33,6 @@ export class UsersRepository implements IUsersRepository{
 
     Object.assign(user, data)
         return await this.repository.save(user)
-    }
-
-    async findAll(): Promise<User[]> {
-        return this.repository.find()
-
     }
 
     async delete(id:string): Promise<void> {

@@ -1,9 +1,10 @@
+import { User } from "../../entities/User"
 import { IUsersRepository } from "../../repositories/users/IUsersRepositories"
 
-export class ListUsersUseCase{
+export class ListUsersUseCase {
     constructor(private usersRepository:IUsersRepository){}
-}
-
-async executionAsyncResource():Promise<User[]>{
-    return this.usersRepository.findAll
+    async execute():Promise<Omit<User, 'password'>[]>{
+        const users = await this.usersRepository.findAll()
+        return users.map(({password, ...user})=>user)
+    }
 }

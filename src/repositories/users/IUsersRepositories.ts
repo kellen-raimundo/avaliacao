@@ -2,7 +2,7 @@ import { User } from "../../entities/User"
 
 export interface IUsersRepository{
     create(user:User):Promise<User>
-    findAll(id:string):Promise<User[]>
+    findAll():Promise<User[]>
     findById(id:string):Promise<User|null>
     findByEmail(email:string):Promise<User|null>
     findByPhone(phone:string):Promise<User|null>

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev:start": "tsx --watch .src/server.ts",
+    "dev:start": "tsx --watch src/server.ts",
     "typeorm": "node --import tsx ./node_modules/typeorm/cli.js"
   },
   "keywords": [],

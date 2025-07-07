@@ -7,7 +7,7 @@ async function startServer(){
             console.error('Erro no servidor', err)
             process.exit (1)
         }
-        console.log('Servidor executando no IP ${adress} ')
+        console.log(`Servidor executando no IP ${addres} `)
     })
 }
 
